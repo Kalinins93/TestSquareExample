@@ -8,6 +8,6 @@ import lombok.Setter;
 @Getter
 @NoArgsConstructor
 @Setter
-public class SingleResult extends MathematicsTypes {
+public class SingleResult implements MathematicsTypes {
     private double x;
 }

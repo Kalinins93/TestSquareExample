@@ -7,7 +7,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Setter
 @Getter
-public class SomeResult extends MathematicsTypes {
+public class SomeResult implements MathematicsTypes {
     private double x1;
     private  double x2;
 }
