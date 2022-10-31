@@ -12,11 +12,11 @@ import java.util.Map;
 public class QuadraticEquation {
     private static final Logger logger = LoggerFactory.getLogger(QuadraticEquation.class);
 
-    public MathematicsTypes toCalculate(Map<String, String> allParams) throws NumberFormatException, NullPointerException {
-        logger.info("Input {}", allParams);
-        double a = Double.parseDouble(allParams.get("a"));
-        double b = Double.parseDouble(allParams.get("b"));
-        double c = Double.parseDouble(allParams.get("c"));
+    public MathematicsTypes toCalculate(Request request) throws NumberFormatException, NullPointerException {
+        logger.info("Input {}", request.toString());
+        double a = Double.parseDouble(request.getA());
+        double b = Double.parseDouble(request.getB());
+        double c = Double.parseDouble(request.getC());
         double d = b * b - 4 * a * c;
         logger.info("D ={}", d);
         if (d == 0) {
