@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id: 15967840934-2
+      author: ilia
+      changes:
+        - sql:
+            sql: Create SEQUENCE id_variable;
+        - sql:
+            sql: CREATE TABLE variables(id integer PRIMARY KEY NOT NULL, a character(256), b character(256),c character(256));
+      comment: Add table variables!
