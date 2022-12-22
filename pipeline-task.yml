@@ -10,7 +10,7 @@ spec:
     params:
       - name: pathToDockerFile
         description: Path to Dockerfile
-        default: /workspace/git-repo/Dockerfile
+        default: /workspace/git-repo/Dockerfile/
       - name: pathToContext
         description: The build context used by Kaniko
         default: /workspace/git-repo
