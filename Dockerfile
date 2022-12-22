@@ -1,6 +1,6 @@
 FROM docker.io/maven
 COPY src /home/app/src
-COPY ../pom.xml /home/app
+COPY pom.xml /home/app
 CMD ls
 RUN mvn -f /home/app/pom.xml clean package
 ARG JAR_FILE=/home/app/target/QuadraticExampleApplication-1.0-SNAPSHOT.jar
