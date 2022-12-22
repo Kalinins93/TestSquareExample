@@ -6,6 +6,8 @@ spec:
   resources:
     - name: git-repo
       type: git
+    - name: image-registry
+      type: image
   tasks:
     - name: build-docker-image
       taskRef:
@@ -19,3 +21,6 @@ spec:
         inputs:
           - name: git-repo
             resource: git-repo
+        outputs:
+          - name: image-registry
+            resource: image-registry
