@@ -1,7 +1,7 @@
 apiVersion: tekton.dev/v1alpha1
 kind: Pipeline
 metadata:
-  name: demo-pipeline
+  name: demo-pipeline-test
 spec:
   resources:
     - name: git-repo

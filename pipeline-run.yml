@@ -1,10 +1,10 @@
 apiVersion: tekton.dev/v1alpha1
 kind: PipelineRun
 metadata:
-  name: demo-pipeline-run-1
+  name: demo-pipeline-run-test
 spec:
   pipelineRef:
-    name: demo-pipeline
+    name: demo-pipeline-test
   resources:
     - name: git-repo
       resourceRef:
