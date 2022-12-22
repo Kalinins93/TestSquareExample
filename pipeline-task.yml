@@ -25,6 +25,7 @@ spec:
         - name: "DOCKER_CONFIG"
           value: "/builder/home/.docker/"
       command:
+        - ls
         - /kaniko/executor
       args:
         - --dockerfile=${inputs.params.pathToDockerFile}
