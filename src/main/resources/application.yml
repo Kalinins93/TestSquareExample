@@ -9,7 +9,7 @@ spring.datasource:
     data-source-properties:
       reWriteBatchedInserts: true
       hikari:
-        maximumPoolSize: 20
+        maximumPoolSize: 21
         idleTimeout: 30000
         connectionTimeout: 20000
         poolName: test-pool
