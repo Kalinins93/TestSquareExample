@@ -1,4 +1,4 @@
-apiVersion: tekton.dev/v1beta1
+apiVersion: tekton.dev/v1alpha1
 kind: Task
 metadata:
   name: build-docker-image
@@ -10,10 +10,10 @@ spec:
     params:
       - name: pathToDockerFile
         description: Path to Dockerfile
-        default: /workspace/git-repo/Dockerfile
+        default: /workspace/TestSquareExample/Dockerfile
       - name: pathToContext
         description: The build context used by Kaniko
-        default: /workspace/git-repo
+        default: /workspace/TestSquareExample
   outputs:
     resources:
       - name: image-registry
@@ -25,7 +25,6 @@ spec:
         - name: "DOCKER_CONFIG"
           value: "/builder/home/.docker/"
       command:
-        - ls
         - /kaniko/executor
       args:
         - --dockerfile=${inputs.params.pathToDockerFile}
